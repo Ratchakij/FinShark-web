@@ -2,10 +2,12 @@ import axios from "axios";
 import {
     CompanyBalanceSheet,
     CompanyCashFlow,
+    CompanyCompData,
     CompanyIncomeStatement,
     CompanyKeyMetrics,
     CompanyProfile,
     CompanySearch,
+    CompanyTenK,
 } from "./company";
 
 interface SearchResponse {
@@ -82,6 +84,31 @@ export const getCashFlow = async (query: string) => {
         const apiKey = import.meta.env.VITE_API_KEY;
         const data = await axios.get<CompanyCashFlow[]>(
             `https://financialmodelingprep.com/api/v3/cash-flow-statement/${query}?limit=100&apikey=${apiKey}`
+        );
+        return data;
+    } catch (error: any) {
+        console.log("error message: ", error.message);
+    }
+};
+
+// Endpoint is not available - Upgrade account
+export const getCompData = async (query: string) => {
+    try {
+        const apiKey = import.meta.env.VITE_API_KEY;
+        const data = await axios.get<CompanyCompData[]>(
+            `https://financialmodelingprep.com/api/v4/stock_peers?symbol=${query}&apikey=${apiKey}`
+        );
+        return data;
+    } catch (error: any) {
+        console.log("error message: ", error.message);
+    }
+};
+
+export const getTenK = async (query: string) => {
+    try {
+        const apiKey = import.meta.env.VITE_API_KEY;
+        const data = await axios.get<CompanyTenK[]>(
+            `https://financialmodelingprep.com/api/v3/sec_filings/${query}?type=10-K&page=0&apikey=${apiKey}`
         );
         return data;
     } catch (error: any) {

@@ -75,6 +75,4 @@ Issue: Property 'isAxiosError' does not exist on type 'AxiosStatic'.
 Solve: npm uninstall @types/axios
 
 # Topics
-
-React TypeScript 2023 - 25. Loading Spinner
-React Typescript 2023 - 26. Comparable Finder
+React TypeScript 2023 - 28. Finishing Touches Before API
