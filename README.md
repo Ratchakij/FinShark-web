@@ -67,6 +67,7 @@ npm i --save-dev @types/react-router
 npm i --save-dev @types/react-router-dom
 
 npm i react-icons --save
+npm i --save react-spinners
 
 # Error
 
@@ -76,3 +77,4 @@ Solve: npm uninstall @types/axios
 # Topics
 
 React TypeScript 2023 - 25. Loading Spinner
+React Typescript 2023 - 26. Comparable Finder
