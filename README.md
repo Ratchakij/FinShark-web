@@ -68,6 +68,13 @@ npm i --save-dev @types/react-router-dom
 
 npm i react-icons --save
 npm i --save react-spinners
+npm i --save react-toastify
+npm i react-hook-form yup @hookform/resolvers 
+/*
+    @hookform/resolver – เป็นตัวเชื่อม (Resolver) ระหว่าง react-hook-form และ yup ทำให้สามารถใช้ yup เป็น validation schema ร่วมกับ react-hook-form ได้อย่างง่ายดาย
+*/
+
+
 
 # Error
 
@@ -75,4 +82,4 @@ Issue: Property 'isAxiosError' does not exist on type 'AxiosStatic'.
 Solve: npm uninstall @types/axios
 
 # Topics
-React TypeScript 2023 - 28. Finishing Touches Before API
+React Typescript Context Auth JWT - 37. Protected Routes
